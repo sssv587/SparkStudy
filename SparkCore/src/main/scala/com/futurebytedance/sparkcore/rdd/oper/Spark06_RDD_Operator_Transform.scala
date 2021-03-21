@@ -1,0 +1,38 @@
+package com.futurebytedance.sparkcore.rdd.oper
+
+import org.apache.spark.rdd.RDD
+import org.apache.spark.{SparkConf, SparkContext}
+
+/**
+ * @author yuhang.sun 2021/3/21 - 23:11
+ * @version 1.0
+ *          RDD转换算子-groupBy
+ *
+ * 函数签名
+ * def groupBy[K](f: T => K)(implicit kt: ClassTag[K]): RDD[(K, Iterable[T])]
+ *
+ * 函数说明
+ * 将数据根据指定的规则进行分组, 分区默认不变，但是数据会被打乱重新组合，我们将这样的操作称之为shuffle。极限情况下，数据可能被分在同一个分区中
+ * 一个组的数据在一个分区中，但是并不是说一个分区中只有一个组
+ */
+object Spark06_RDD_Operator_Transform {
+  def main(args: Array[String]): Unit = {
+    val sparkConf: SparkConf = new SparkConf().setMaster("local[*]").setAppName("RDD")
+    val sc: SparkContext = new SparkContext(sparkConf)
+
+    //TODO 算子-groupBy
+    val rdd: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4), 2)
+
+    //groupBy:将数据源中的每一个数据进行分组判断，根据返回的分组key进行分组
+    //相同的key值得数据会放置在一个组中
+    def groupFunction(num: Int): Int = {
+      num % 2
+    }
+
+    val groupRDD: RDD[(Int, Iterable[Int])] = rdd.groupBy(groupFunction)
+
+    groupRDD.collect().foreach(println)
+
+    sc.stop()
+  }
+}
