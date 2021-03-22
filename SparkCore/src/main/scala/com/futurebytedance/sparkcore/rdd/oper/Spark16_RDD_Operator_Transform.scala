@@ -6,7 +6,7 @@ import org.apache.spark.rdd.RDD
 /**
  * @author yuhang.sun 2021/3/22 - 23:00
  * @version 1.0
- *          RDD转换算子-双值类型-groupByKey算子
+ *          RDD转换算子-KV类型-groupByKey算子
  *
  * 函数签名
  * def groupByKey(): RDD[(K, Iterable[V])]
