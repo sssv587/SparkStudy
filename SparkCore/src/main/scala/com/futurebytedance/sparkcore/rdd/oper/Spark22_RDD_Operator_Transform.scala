@@ -7,6 +7,11 @@ import org.apache.spark.rdd.RDD
  * @author yuhang.sun 2021/3/23 - 1:15
  * @version 1.0
  *          RDD转换算子-leftOuterJoin算子和rightOuterJoin
+ *
+ * 函数签名
+ * def leftOuterJoin[W](other: RDD[(K, W)]): RDD[(K, (V, Option[W]))]
+ * 函数说明
+ * 类似于 SQL 语句的左外连接
  */
 object Spark22_RDD_Operator_Transform {
   def main(args: Array[String]): Unit = {
