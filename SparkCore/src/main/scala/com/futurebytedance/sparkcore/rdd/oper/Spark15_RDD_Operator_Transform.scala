@@ -6,7 +6,7 @@ import org.apache.spark.rdd.RDD
 /**
  * @author yuhang.sun 2021/3/22 - 22:52
  * @version 1.0
- *          RDD转换算子-双值类型-reduceByKey算子
+ *          RDD转换算子-KV类型-reduceByKey算子
  * 函数签名
  * def reduceByKey(func: (V, V) => V): RDD[(K, V)]
  * def reduceByKey(func: (V, V) => V, numPartitions: Int): RDD[(K, V)]
