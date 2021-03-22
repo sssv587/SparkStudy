@@ -6,7 +6,7 @@ import org.apache.spark.rdd.RDD
 /**
  * @author yuhang.sun 2021/3/23 - 0:56
  * @version 1.0
- *          RDD转换算子-KV类型-combineByKey算子
+ *          RDD转换算子-KV类型-各种ByKey算子的关系
  */
 object Spark20_RDD_Operator_Transform {
   def main(args: Array[String]): Unit = {
