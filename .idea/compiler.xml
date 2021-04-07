@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SparkCore" />
         <module name="SparkSQL" />
+        <module name="SparkStreaming" />
       </profile>
     </annotationProcessing>
   </component>

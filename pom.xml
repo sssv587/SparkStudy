@@ -11,6 +11,7 @@
     <modules>
         <module>SparkCore</module>
         <module>SparkSQL</module>
+        <module>SparkStreaming</module>
     </modules>
 
 
