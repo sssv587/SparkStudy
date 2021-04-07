@@ -7,6 +7,7 @@ import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 /**
  * @author yuhang.sun 2021/4/8 - 0:24
  * @version 1.0
+ *          SparkStreaming-有状态-window
  */
 object SparkStreaming06_Window {
   def main(args: Array[String]): Unit = {
